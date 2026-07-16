@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مداد | MIDAD — فن الخط العربي بروح الطبيعة</title>
+    <meta
+      name="description"
+      content="مداد MIDAD — لوحات خط عربي مستوحاة من جمال الطبيعة، بقلم الخطاط تومي فضيل. تصفّح المعرض وتواصل لطلب لوحة مخصّصة."
+    />
+    <meta name="theme-color" content="#0d1512" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="مداد | MIDAD — فن الخط العربي بروح الطبيعة"
+    />
+    <meta
+      property="og:description"
+      content="لوحات خط عربي مستوحاة من جمال الطبيعة، بقلم الخطاط تومي فضيل."
+    />
+    <meta property="og:image" content="images/02-bigframe.png" />
+    <meta property="og:locale" content="ar_AR" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="loader">
+      <svg viewBox="0 0 220 120">
+        <path
+          id="loaderPath"
+          d="M20,90 C40,20 60,110 90,50 C110,10 130,100 160,40 C175,15 190,60 200,30"
+        />
+      </svg>
+      <span>مداد يُكتب</span>
+    </div>
+
+    <div id="glow"></div>
+    <div id="progress"></div>
+
+    <nav>
+      <div class="brandmark">
+        <span class="ar">مداد</span><span class="en">MIDAD</span>
+      </div>
+      <div class="navlinks" id="navLinks">
+        <a href="#gallery">الأعمال</a>
+        <a href="#story">القصة</a>
+        <a href="#fonts">الخطوط</a>
+        <a href="#contact">تواصل</a>
+      </div>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="فتح القائمة"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-content">
+        <svg id="inkSvg" viewBox="0 0 560 180">
+          <path
+            id="namePath"
+            d="M60,110 C80,40 110,150 150,80 C175,35 195,140 230,95 C250,65 270,120 300,90 C330,55 350,130 390,85 C415,55 440,110 480,75 C495,60 505,80 500,95"
+          />
+        </svg>
+        <div class="midad-en" id="midadEn">M I D A D</div>
+        <p class="quote" id="heroQuote">
+          الحرفُ حين يلتقي بجمال الطبيعة… يولد الإبداع
+        </p>
+        <div class="rotator" id="rotator">
+          <div class="rotator-item">فن الخط العربي بروح الطبيعة</div>
+        </div>
+        <a href="#gallery" class="cta" id="heroCta">استكشف الأعمال</a>
+      </div>
+      <div class="scrolldown" id="scrollHint"><div class="line"></div></div>
+    </section>
+
+    <div class="bigframe">
+      <!-- صورة رقم 2: صورة كبيرة عرضية بين الهيرو وقسم القصة — يفضل مقاس عريض 1600×1000 بكسل تقريباً -->
+      <img src="images/02-bigframe.png" alt="عمل من أعمال مداد" />
+      <div class="overlay-quote" data-reveal>
+        <p>آياتٌ تتجلّى… وصورٌ تروي إعجاز الخالق</p>
+        <span>من وحي الطبيعة، بقلم الحرف</span>
+      </div>
+    </div>
+
+    <section id="story">
+      <div class="story-head">
+        <span class="eyebrow" data-reveal>قصة مداد</span>
+        <h2 class="sec-title" data-reveal>من فكرة، إلى حرفٍ يتنفّس</h2>
+        <p class="sec-sub" data-reveal>
+          رحلة بدأت بقلم وورقة، وانتهت بلقاء الخط العربي بجمال الكون من حولنا.
+        </p>
+      </div>
+
+      <div class="story">
+        <div class="spine-wrap">
+          <svg viewBox="0 0 60 1000" preserveAspectRatio="none">
+            <path
+              id="spinePath"
+              d="M30,0 C10,150 50,300 20,450 C0,570 55,650 25,800 C10,880 40,930 30,1000"
+              fill="none"
+              stroke="#B08D3F"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="story-item" data-reveal>
+          <!-- صورة رقم 3: (البداية) - يفضل مقاس عمودي/مربع تقريباً 800×800 بكسل -->
+          <div class="imgwrap">
+            <img
+              src="./images/03-story1.png"
+              alt="تومي فضيل"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="dot"></div>
+          <div class="txt">
+            <div class="phase">البداية</div>
+            <h3>الشرارة الأولى</h3>
+            <p>
+              قلمٌ بسيط، وورقة بيضاء، وفضول طفل بجمال الحروف العربية حين تتشكّل
+              تحت يد صبورة.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-item" data-reveal>
+          <!-- صورة رقم 4: (الاكتشاف) - يفضل مقاس عمودي/مربع تقريباً 800×800 بكسل -->
+          <div class="imgwrap">
+            <img
+              src="./images/04-story2.png"
+              alt="تومي فضيل أثناء التدريس"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="dot"></div>
+          <div class="txt">
+            <div class="phase">الاكتشاف</div>
+            <h3>حين ناديت الآيات</h3>
+            <p>
+              وجدتُ في كتابة القرآن الكريم بالخط العربي معنىً أعمق من الفن،
+              رسالة تستحق أن تُخط بإتقان.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-item" data-reveal>
+          <!-- صورة رقم 5: (اللقاء) - يفضل مقاس عمودي/مربع تقريباً 800×800 بكسل -->
+          <div class="imgwrap">
+            <img
+              src="./images/05-story3.png"
+              alt="عمل من أعمال مداد"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="dot"></div>
+          <div class="txt">
+            <div class="phase">اللقاء</div>
+            <h3>الحرف يلتقي الطبيعة</h3>
+            <p>
+              حملتُ الكاميرا كما أحمل القلم، ورأيتُ في الجبال والسدول ظلالاً
+              لآيات، فبدأ الدمج بين العدسة والقلم.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-item" data-reveal>
+          <!-- صورة رقم 6: (اليوم) - يفضل مقاس عمودي/مربع تقريباً 800×800 بكسل -->
+          <div class="imgwrap">
+            <img
+              src="images/06-story4.png"
+              alt="عمل من أعمال مداد"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="dot"></div>
+          <div class="txt">
+            <div class="phase">اليوم</div>
+            <h3>مداد يُولد</h3>
+            <p>
+              مشروعٌ يحمل اسم الحبر الذي يجري في كل خط، ليصبح معرضاً حيّاً بين
+              الحرف والصورة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <span class="eyebrow" data-reveal>المعرض</span>
+      <h2 class="sec-title" data-reveal>أعمال مختارة</h2>
+      <p class="sec-sub" data-reveal>
+        لمحة من اللوحات التي تجمع بين الخط والطبيعة. كل لوحة تحمل آية، وقصة،
+        ولحظة إلهام.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-01.jpg"
+            alt="توكل"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">توكل</div>
+            <div class="verse">
+              ﴿وَتَوَكَّلْ عَلَى اللَّهِ وَكَفَىٰ بِاللَّهِ وَكِيلًا﴾
+            </div>
+            <div class="khat">خط الثلث</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-02.jpg"
+            alt="قدر"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">قدر</div>
+            <div class="verse">
+              ﴿قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا﴾
+            </div>
+            <div class="khat">حرفية أصيلة</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-03.jpg"
+            alt="هداية"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">هداية</div>
+            <div class="verse">﴿إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ﴾</div>
+            <div class="khat">خط عربي أصيل</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-04.jpg"
+            alt="عابرون"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">عابرون</div>
+            <div class="verse">عابرون والدنيا ليست لنا</div>
+            <div class="khat">خط حر</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-05.jpg"
+            alt="صبر"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">صبر</div>
+            <div class="verse">
+              ﴿وَاصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا﴾
+            </div>
+            <div class="khat">خط عربي أصيل</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-06.jpg"
+            alt="استقامة"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">استقامة</div>
+            <div class="verse">استقم ما نحن إلا أجنّة مؤجّلة</div>
+            <div class="khat">قطعة فنية فريدة</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-07.jpg"
+            alt="دعاء"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">دعاء</div>
+            <div class="verse">﴿وَلَمْ أَكُنْ بِدُعَائِكَ رَبِّ شَقِيًّا﴾</div>
+            <div class="khat">خط النسخ</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-08.jpg"
+            alt="أبي"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">أبي</div>
+            <div class="verse">ومن كأبي</div>
+            <div class="khat">قطعة معرض</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-09.jpg"
+            alt="رضا"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">رضا</div>
+            <div class="verse">﴿وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ﴾</div>
+            <div class="khat">خط يدوي</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-10.jpg"
+            alt="توقيع فني"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">توقيع فني</div>
+            <div class="verse">لمسة لونية معاصرة</div>
+            <div class="khat">عمل فني ملون</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-11.jpg"
+            alt="آخرة"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">آخرة</div>
+            <div class="verse">أجّل الدنيا، أجرُه في الآخرة</div>
+            <div class="khat">خط حر</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-12.jpg"
+            alt="تومي فضيل"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">تومي فضيل</div>
+            <div class="verse">غلاف هاتف مُخطّط يدوياً</div>
+            <div class="khat">منتج - غلاف جوال</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-13.jpg"
+            alt="سبح"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">سبح</div>
+            <div class="verse">
+              ﴿وَاصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا وَسَبِّحْ
+              بِحَمْدِ رَبِّكَ حِينَ تَقُومُ﴾
+            </div>
+            <div class="khat">سورة الطور</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-14.jpg"
+            alt="خالة طريبة"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">خالة طريبة</div>
+            <div class="verse">غلاف هاتف مُخطّط يدوياً</div>
+            <div class="khat">منتج - غلاف جوال</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-15.jpg"
+            alt="إسماعيل بشير"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">إسماعيل بشير</div>
+            <div class="verse">عمل شخصي مُهدى بالاسم</div>
+            <div class="khat">خط حر</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-16.jpg"
+            alt="إهداء"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">إهداء</div>
+            <div class="verse">هديةٌ من القلب لأخٍ عزيز</div>
+            <div class="khat">لوحة معدنية مُهداة</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-17.jpg"
+            alt="دعاء الأمور"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">دعاء الأمور</div>
+            <div class="verse">أصلح لي شأني كله يا الله</div>
+            <div class="khat">الخط الثلث اليدوي</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-18.PNG"
+            alt="قرآن الفجر"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">قرآن الفجر</div>
+            <div class="verse">
+              ﴿وَقُرْآنَ الْفَجْرِ ۖ إِنَّ قُرْآنَ الْفَجْرِ كَانَ مَشْهُودًا﴾
+            </div>
+            <div class="khat">الخط الديواني الجلي</div>
+          </div>
+        </div>
+        <div class="g-item" data-reveal>
+          <img
+            src="images/gallery-19.JPG"
+            alt="لا تيأس"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="g-overlay">
+            <div class="work">لا تيأس</div>
+            <div class="verse">إبداع لا يعرف اليأس</div>
+            <div class="khat">خط الثلث</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-cta" data-reveal>
+        <a href="#" class="cta">مشاهدة المعرض الكامل</a>
+      </div>
+    </section>
+
+    <section id="fonts">
+      <div class="fonts-head">
+        <span class="eyebrow" data-reveal>أدوات الحرف</span>
+        <h2 class="sec-title" data-reveal>الخطوط</h2>
+        <p class="sec-sub" data-reveal>
+          لكل معنى خطّه الذي يليق به. هذه الأساليب التي يتنقّل بينها الحرف في
+          أعمال مداد.
+        </p>
+      </div>
+
+      <div class="fonts-list">
+        <div class="font-row" data-reveal>
+          <div class="font-sample">ثلث</div>
+          <div class="font-body">
+            <h3>خط الثلث</h3>
+            <p>
+              الخط الملكي بانحناءاته المهيبة، يُختار للآيات واللوحات التي تحتاج
+              إلى حضور وجلال.
+            </p>
+          </div>
+        </div>
+        <div class="font-row" data-reveal>
+          <div class="font-sample">نسخ</div>
+          <div class="font-body">
+            <h3>خط النسخ</h3>
+            <p>
+              واضح ومتوازن، يخدم النص حين تكون القراءة والدقة أهم من الزخرفة.
+            </p>
+          </div>
+        </div>
+        <div class="font-row" data-reveal>
+          <div class="font-sample">حرّ</div>
+          <div class="font-body">
+            <h3>الخط الحر</h3>
+            <p>
+              حيث تتحرر الحروف من القواعد الصارمة، لتعبّر بانسيابية عن إحساس
+              اللحظة.
+            </p>
+          </div>
+        </div>
+        <div class="font-row" data-reveal>
+          <div class="font-sample">أصيل</div>
+          <div class="font-body">
+            <h3>الخط العربي الأصيل</h3>
+            <p>
+              امتداد لتراث الخطاطين الأوائل، يُحافظ على القواعد التقليدية بحرفية
+              دقيقة.
+            </p>
+          </div>
+        </div>
+        <div class="font-row" data-reveal>
+          <div class="font-sample">يدوي</div>
+          <div class="font-body">
+            <h3>الخط اليدوي المعاصر</h3>
+            <p>
+              لمسة شخصية بالقلم على القطع والمنتجات، تجمع بين الطابع الحديث وروح
+              الحرف.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-head">
+        <span class="eyebrow" data-reveal>لنبقَ على تواصل</span>
+        <h2 class="sec-title" data-reveal>تواصل معي</h2>
+        <p class="sec-sub" data-reveal>
+          لطلب لوحة مخصصة، أو الاستفسار عن عمل، أو مجرّد التحية — اخترْ الوسيلة
+          الأنسب لك وسأكون بانتظارك.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <a
+          class="contact-card"
+          data-reveal
+          href="https://wa.me/213550870320"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.5 3.5a11 11 0 0 0-17.4 13.2L2 21l4.4-1.2A11 11 0 0 0 20.5 3.5Z"
+              />
+              <path
+                d="M8.5 8.3c.2-.5.5-.5.8-.5h.6c.2 0 .5 0 .7.5.3.6.9 2 .9 2.2s0 .3-.1.5c-.2.3-.3.4-.5.6-.2.2-.4.4-.2.7.7 1.2 1.5 2 2.9 2.7.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.2.3-.3.6-.2.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1 1-.3 1.6-.4.7-1.7 1.3-2.4 1.3-.7 0-2.1-.2-4.1-1.9-2.4-2-3.7-4.3-3.9-4.7-.2-.4-1-1.5-1-2.9 0-1.4.7-2 .9-2.3Z"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">واتساب</span>
+            <span class="contact-value">0550 87 03 20</span>
+          </span>
+        </a>
+
+        <a
+          class="contact-card"
+          data-reveal
+          href="https://t.me/midad_art"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 4 3 11.2c-.9.4-.9 1 .1 1.3l4.6 1.4 1.8 5.5c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.2-2.1 4.5 3.3c.8.5 1.4.2 1.6-.7L23 5.4c.3-1.2-.3-1.7-2-1.4Z"
+              />
+              <path d="M8.7 13.9 17.5 8c.4-.3.8-.1.5.2l-7.2 6.5-.3 3.4" />
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">تيليجرام</span>
+            <span class="contact-value">toumi_fodhil@</span>
+          </span>
+        </a>
+
+        <a
+          class="contact-card"
+          data-reveal
+          href="https://www.instagram.com/midad._art?igsh=ZmNxYmQ0OTdoa2xn"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.2"
+                cy="6.8"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">إنستغرام</span>
+            <span class="contact-value">midad._art</span>
+          </span>
+        </a>
+
+        <a
+          class="contact-card"
+          data-reveal
+          href="https://web.facebook.com/MIDAD.I.ART"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M15 8.5h2.5V5H15c-2 0-3.5 1.6-3.5 3.6v2H9.5V14H11.5v6H14.5V14h2.3l.5-3.4H14.5v-1.6c0-.6.3-.9 1-.9Z"
+              />
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">فيسبوك</span>
+            <span class="contact-value">TF Toumi Fodhil</span>
+          </span>
+        </a>
+
+        <a
+          class="contact-card"
+          data-reveal
+          href="https://youtube.com/@midad._art?si=ENUXqhSX5B8-FpYa"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2.5" y="6.5" width="19" height="11" rx="3.5" />
+              <path
+                d="M10.7 9.8v4.4l4-2.2Z"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">يوتيوب</span>
+            <span class="contact-value">MIDAD._ART@</span>
+          </span>
+        </a>
+
+        <a
+          class="contact-card"
+          data-reveal
+          href="https://www.tiktok.com/@midad.art17?lang=ar"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M14 3.5c.4 2 1.9 3.4 4 3.6v2.6c-1.5 0-2.8-.5-4-1.3v6c0 3-2.4 5.1-5.2 5.1S3.5 17.4 3.5 14.4c0-2.9 2.2-5.1 5.1-5.1.4 0 .8 0 1.2.1v2.7a2.7 2.7 0 0 0-1.2-.3c-1.5 0-2.6 1.2-2.6 2.6s1.1 2.6 2.6 2.6 2.7-1.1 2.8-2.6V3.5Z"
+              />
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">تيك توك</span>
+            <span class="contact-value">midad.art17</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="contact-direct" data-reveal>
+        <div class="who">تومي فضيل<span>صاحب مشروع مداد MIDAD</span></div>
+        <a
+          class="cta"
+          href="https://wa.me/213550870320"
+          target="_blank"
+          rel="noopener"
+          >تواصل عبر واتساب</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="brandmark">
+        <span class="ar">مداد</span><span class="en">MIDAD</span>
+      </div>
+      <p>© مداد MIDAD — فن الخط العربي بروح الطبيعة</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
